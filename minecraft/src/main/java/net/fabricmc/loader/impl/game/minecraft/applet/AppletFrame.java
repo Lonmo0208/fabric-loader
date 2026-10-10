@@ -17,7 +17,6 @@
 package net.fabricmc.loader.impl.game.minecraft.applet;
 
 import java.awt.Dimension;
-import java.awt.Frame;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.event.WindowEvent;
@@ -26,6 +25,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 import net.fabricmc.loader.impl.util.Arguments;
 
@@ -38,7 +38,7 @@ import net.fabricmc.loader.impl.util.Arguments;
  * <p>It has been adapted here for the purposes of the Fabric loader.
  */
 @SuppressWarnings("serial")
-public class AppletFrame extends Frame implements WindowListener {
+public class AppletFrame extends JFrame implements WindowListener {
 	private AppletLauncher applet = null;
 
 	public AppletFrame(String title, ImageIcon icon) {
