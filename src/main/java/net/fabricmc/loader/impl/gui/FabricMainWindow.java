@@ -301,8 +301,6 @@ class FabricMainWindow {
 
 		DefaultTreeModel model = new DefaultTreeModel(treeNode);
 		JTree tree = new JTree(model) {
-			private static final long serialVersionUID = 1L;
-
 			@Override
 			public String convertValueToText(Object value, boolean selected, boolean expanded, boolean leaf, int row, boolean hasFocus) {
 				if (value instanceof CustomTreeNode) {
@@ -312,6 +310,7 @@ class FabricMainWindow {
 				return super.convertValueToText(value, selected, expanded, leaf, row, hasFocus);
 			}
 		};
+
 
 		tree.setRootVisible(false);
 		tree.setRowHeight(0); // Allow rows to be multiple lines tall
